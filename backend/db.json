@@ -7,27 +7,15 @@
       "modelo": "modelo3"
     },
     {
-      "id": 2,
-      "conteudo": "NGFOR na veia!",
-      "autoria": "Alan DEV",
-      "modelo": "modelo3"
-    },
-    {
       "id": 3,
       "conteudo": "Lorem ipsum dolor sit amet. Et voluptatem optio At voluptatem facere qui laborum tempora ad esse fugit vel delectus internos est sint quaerat hic fuga eius. Est voluptas nemo id architecto numquam et porro magni sed molestias consequatur est animi sapiente eos vitae placeat? Nam saepe exercitationem vel laboriosam necessitatibus qui nulla incidunt eos eligendi praesentium non enim repellat. Ex minus doloribus eos nisi illum qui pariatur labore ut placeat commodi At natus dolorem.",
       "autoria": "Alan DEV",
       "modelo": "modelo3"
     },
     {
-      "id": 4,
-      "conteudo": "eee",
-      "autoria": "eee",
-      "modelo": "modelo1"
-    },
-    {
-      "id": 5,
-      "conteudo": "AaAASAS",
-      "autoria": "ASAS",
+      "id": 6,
+      "conteudo": "Hoje é sexta-feira",
+      "autoria": "Alan",
       "modelo": "modelo1"
     }
   ]
