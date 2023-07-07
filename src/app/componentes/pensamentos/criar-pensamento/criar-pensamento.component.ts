@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PensamentoService } from '../pensamento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -8,22 +10,35 @@ import { Component, OnInit } from '@angular/core';
 export class CriarPensamentoComponent implements OnInit {
 
   pensamento = {
-    conteudo : "pensamento",
-    autoria : "alan",
-    modelo : 0,
+    id: 0,
+    conteudo : "",
+    autoria : "",
+    modelo : "modelo1"
   }
 
-  constructor() { }
+  constructor(
+      private service: PensamentoService,
+      private router: Router
+      ) { }
 
   ngOnInit(): void {
   }
 
+  criarPensamento(){
+    this.service.criar(this.pensamento).subscribe(() => {
+      this.router.navigate(["/listarPensamento"])
+    })
+  }
+
   resetar (){
     this.pensamento = {
+      id: 0,
       conteudo : "",
       autoria : "",
-      modelo : 0,
+      modelo : "",
     };
+
+    this.router.navigate(["/listarPensamento"])
   }
 
 }

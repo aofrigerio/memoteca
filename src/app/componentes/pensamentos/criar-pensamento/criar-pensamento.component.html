@@ -58,8 +58,9 @@
             </div>
         </div>
         <div class="acoes">
-            <button class="botao">Salvar</button>
+            <button (click)="criarPensamento()" class="botao">Salvar</button>
             <button (click)="resetar()" class="botao">Cancelar</button>
+            <button routerLink="/" class="botao">Voltar</button>
         </div>
     </form>
 </section>
