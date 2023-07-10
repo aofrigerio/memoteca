@@ -11,6 +11,11 @@
         placeholder="Digite o pensamento" 
         formControlName="conteudo"
         >
+        <div class="mensagem__erro" 
+            *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched ">
+            {{ formulario.get('conteudo')?.errors }}
+        </div>
+
         <label for="autoria">Autoria ou fonte</label>
         <input type="text" 
         class="input" 
@@ -19,6 +24,11 @@
         placeholder="Digite a autoria ou fonte" 
         formControlName="autoria"
         >
+        <div class="mensagem__erro" 
+            *ngIf="formulario.get('autoria')?.errors && formulario.get('autoria')?.touched">
+            Erro!
+        </div>
+
         <label for="modelo">Selecione o modelo do card:</label>
         <div class="container-radio">
             <div class="radio-modelo">
@@ -70,7 +80,10 @@
             </div>
         </div>
         <div class="acoes">
-            <button (click)="criarPensamento()" class="botao">Salvar</button>
+            <button (click)="criarPensamento()" 
+            [ngClass]="habilitarBotao()"
+            [disabled]="!formulario.valid"
+            >Salvar</button>
             <button (click)="resetar()" class="botao">Cancelar</button>
             <button routerLink="/" class="botao">Voltar</button>
         </div>
